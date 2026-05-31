@@ -1,3 +1,15 @@
+// Theme color picker
+document.querySelectorAll('.swatch').forEach(swatch => {
+  swatch.addEventListener('click', () => {
+    document.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+    swatch.classList.add('active');
+    const root = document.documentElement;
+    root.style.setProperty('--blue', swatch.dataset.color);
+    root.style.setProperty('--blue-dark', swatch.dataset.dark);
+    root.style.setProperty('--blue-light', swatch.dataset.light);
+  });
+});
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
