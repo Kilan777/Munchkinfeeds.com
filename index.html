@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Munchkin — Assistive Feeding Device</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">Munchkin</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#who-we-help">Who We Help</a></li>
+        <li><a href="#comparison">vs. Obi</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" class="mobile-link">About</a>
+    <a href="#features" class="mobile-link">Features</a>
+    <a href="#who-we-help" class="mobile-link">Who We Help</a>
+    <a href="#comparison" class="mobile-link">vs. Obi</a>
+    <a href="#how-it-works" class="mobile-link">How It Works</a>
+    <a href="#videos" class="mobile-link">Videos</a>
+    <a href="#contact" class="mobile-link">Contact Us</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <span class="hero-badge">Assistive Technology · Munchkin LLC</span>
+      <h1>Independent eating,<br /><em>redefined.</em></h1>
+      <p class="hero-sub">Munchkin is a 4-DOF robotic feeding assistant that uses computer vision and intelligent automation to help individuals with limited mobility eat independently — with dignity.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Demo</a>
+        <a href="#about" class="btn btn-secondary">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-image-placeholder">
+        <div class="placeholder-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="40" cy="40" r="38" stroke="#2563EB" stroke-width="2" opacity="0.2"/>
+            <path d="M40 20 L40 60 M28 32 Q40 24 52 32" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="40" cy="62" r="4" fill="#2563EB" opacity="0.5"/>
+          </svg>
+        </div>
+        <p class="placeholder-text">Product photo coming soon</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP -->
+  <section class="stats-strip">
+    <div class="stats-inner">
+      <div class="stat">
+        <span class="stat-value">4-DOF</span>
+        <span class="stat-label">Robotic Arm</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value">30 fps</span>
+        <span class="stat-label">Mouth Tracking</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value">2 hrs</span>
+        <span class="stat-label">Battery Life</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Tracking Accuracy</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner two-col">
+      <div class="about-text">
+        <span class="section-label">Our Story</span>
+        <h2>Built by engineers who care about independence.</h2>
+        <p>Munchkin was developed at <strong>Olin College of Engineering</strong> by mechanical engineering students <strong>Kilan Roug&eacute;ot</strong> and <strong>Dhvan Shah</strong>. What started as an academic project evolved into a mission to bring meaningful assistive technology to people who need it most.</p>
+        <p>In April 2026 we formally established <strong>Munchkin LLC</strong> and received a Student Academic Grant to fund continued prototyping and development. We are actively seeking partners, investors, and clinical collaborators to help bring Munchkin to market.</p>
+        <div class="team-cards">
+          <div class="team-card">
+            <div class="team-avatar">KR</div>
+            <div>
+              <p class="team-name">Kilan Rougéot</p>
+              <p class="team-role">Co-Founder · Mechanical Engineering</p>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-avatar">DS</div>
+            <div>
+              <p class="team-name">Dhvan Shah</p>
+              <p class="team-role">Co-Founder · Mechanical Engineering</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrap">
+        <div class="about-image-placeholder">
+          <p>Team / device photo</p>
+        </div>
+        <div class="about-badge">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2l2.4 5.2 5.6.8-4.1 3.9 1 5.7L10 14.8 5.1 17.6l1-5.7L2 8.0l5.6-.8z" fill="#2563EB"/></svg>
+          <span>Student Academic Grant Recipient · April 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="bg-light">
+    <div class="section-inner">
+      <span class="section-label">Features</span>
+      <h2>Everything you need, nothing you don't.</h2>
+      <p class="section-sub">Munchkin is engineered to be safe, intuitive, and adaptable to real-life needs.</p>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="16" r="7" stroke="#2563EB" stroke-width="2"/><path d="M8 34c0-6.627 5.373-12 12-12s12 5.373 12 12" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Facial Tracking</h3>
+          <p>Computer vision automatically detects and tracks the user's mouth in real time at 30 fps — no manual aiming needed.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="8" y="22" width="24" height="10" rx="2" stroke="#2563EB" stroke-width="2"/><path d="M14 22v-4a6 6 0 0 1 12 0v4" stroke="#2563EB" stroke-width="2"/></svg>
+          </div>
+          <h3>Magnetic Tool Changer</h3>
+          <p>Swap between a spoon and fork in seconds with the magnetic quick-release end effector — no tools required.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="10" stroke="#2563EB" stroke-width="2"/><path d="M20 14v6l4 2" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Automatic Food Detection</h3>
+          <p>Onboard vision identifies food items on the plate and plans the optimal scooping path automatically.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="10" y="8" width="20" height="16" rx="2" stroke="#2563EB" stroke-width="2"/><path d="M14 28h12M20 24v4" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>User-Facing Screen</h3>
+          <p>An integrated display and accessible control buttons face the user directly, showing status and letting them initiate each feeding cycle.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><ellipse cx="20" cy="30" rx="12" ry="4" stroke="#2563EB" stroke-width="2"/><circle cx="20" cy="20" r="6" stroke="#2563EB" stroke-width="2"/><path d="M14 26v-2M26 26v-2" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Universal Plate Holder</h3>
+          <p>A ring-based collapsible plate holder secures any standard plate or bowl — no special dishware needed.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 40 40" fill="none"><rect x="12" y="28" width="16" height="6" rx="2" stroke="#2563EB" stroke-width="2"/><path d="M20 28V10M14 16l6-6 6 6" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Compact & Portable</h3>
+          <p>A slim form factor folds for easy transport, and the built-in battery delivers up to 2 hours of continuous use on a single charge.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO WE HELP -->
+  <section id="who-we-help">
+    <div class="section-inner">
+      <span class="section-label">Who We Help</span>
+      <h2>Designed for anyone with limited upper extremity function.</h2>
+      <p class="section-sub">Munchkin is indicated for individuals living with conditions that affect arm or hand mobility. If you can chew and swallow independently, Munchkin can help you eat independently too.</p>
+      <div class="conditions-grid">
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Amyotrophic Lateral Sclerosis (ALS)</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Cerebral Palsy</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Spinal Cord Injury</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Spinal Muscular Atrophy</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Muscular Dystrophy</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Multiple Sclerosis</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Parkinson's Disease</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Essential Tremor</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Traumatic Brain Injury (TBI)</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Amputation</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Arthrogryposis (AMC)</span>
+        </div>
+        <div class="condition-item">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Rett Syndrome</span>
+        </div>
+        <div class="condition-item condition-item--more">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#2563EB" stroke-width="1.5"/><path d="M7 10l2 2 4-4" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Other conditions affecting upper extremities</span>
+        </div>
+      </div>
+      <p class="conditions-note">Not sure if Munchkin is right for you? <a href="#contact">Send us a message</a> — we're happy to discuss your specific situation.</p>
+    </div>
+  </section>
+
+  <!-- COMPARISON -->
+  <section id="comparison" class="bg-light">
+    <div class="section-inner">
+      <span class="section-label">Why Munchkin</span>
+      <h2>The next generation of assistive feeding.</h2>
+      <p class="section-sub">We respect the devices that came before us. Munchkin is built to go further — smarter technology, greater autonomy, and a design that works with your life.</p>
+      <div class="comparison-table-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th class="col-feature">Feature</th>
+              <th class="col-munchkin">
+                <span class="table-brand table-brand--munchkin">Munchkin</span>
+              </th>
+              <th class="col-obi">
+                <span class="table-brand table-brand--obi">Obi</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Automatic mouth tracking</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Computer vision, hands-free</td>
+              <td class="no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEE2E2"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg> Manual switch required</td>
+            </tr>
+            <tr>
+              <td>Automatic food detection</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> AI-powered plate scanning</td>
+              <td class="no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEE2E2"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg> 4 fixed food compartments</td>
+            </tr>
+            <tr>
+              <td>Works with any plate or bowl</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Universal ring holder</td>
+              <td class="no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEE2E2"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg> Proprietary divided bowl</td>
+            </tr>
+            <tr>
+              <td>Fork &amp; spoon interchangeable</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Magnetic quick-swap</td>
+              <td class="partial"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEF9C3"/><path d="M10 6v5M10 13v1" stroke="#CA8A04" stroke-width="1.8" stroke-linecap="round"/></svg> Spoon only (standard)</td>
+            </tr>
+            <tr>
+              <td>On-device display</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> User-facing screen</td>
+              <td class="no"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEE2E2"/><path d="M7 7l6 6M13 7l-6 6" stroke="#DC2626" stroke-width="1.8" stroke-linecap="round"/></svg> No display</td>
+            </tr>
+            <tr>
+              <td>Degrees of freedom</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 4-DOF robotic arm</td>
+              <td class="partial"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEF9C3"/><path d="M10 6v5M10 13v1" stroke="#CA8A04" stroke-width="1.8" stroke-linecap="round"/></svg> Limited range of motion</td>
+            </tr>
+            <tr>
+              <td>Battery life</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> 2 hours per charge</td>
+              <td class="partial"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEF9C3"/><path d="M10 6v5M10 13v1" stroke="#CA8A04" stroke-width="1.8" stroke-linecap="round"/></svg> Not publicly specified</td>
+            </tr>
+            <tr>
+              <td>Developed with academic rigor</td>
+              <td class="yes"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#DCFCE7"/><path d="M6 10l3 3 5-5" stroke="#16A34A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Olin College of Engineering</td>
+              <td class="partial"><svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="9" fill="#FEF9C3"/><path d="M10 6v5M10 13v1" stroke="#CA8A04" stroke-width="1.8" stroke-linecap="round"/></svg> Established product</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="comparison-note">Comparison based on publicly available information from <a href="https://meetobi.com" target="_blank" rel="noopener">meetobi.com</a>. Munchkin is currently in active development.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works">
+    <div class="section-inner">
+      <span class="section-label">How It Works</span>
+      <h2>Three steps to every meal.</h2>
+      <p class="section-sub">Munchkin is designed to be as simple to use as it is sophisticated under the hood.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-body">
+            <h3>Set Up</h3>
+            <p>Place your plate in the ring holder and power on Munchkin. The device homes itself and the camera maps the food on your plate.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-body">
+            <h3>Activate</h3>
+            <p>Press the control button or use the on-screen prompt. Munchkin scoops a portion of food and tracks your face to deliver it precisely.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-body">
+            <h3>Eat</h3>
+            <p>The arm extends to your mouth. Once you've taken the bite, it automatically retreats and reloads — ready for the next one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section id="videos" class="bg-light">
+    <div class="section-inner">
+      <span class="section-label">See It in Action</span>
+      <h2>Watch Munchkin work.</h2>
+      <p class="section-sub">Demo videos coming soon. Leave your email below to be notified when they go live, or request a live demo.</p>
+      <div class="videos-grid">
+        <div class="video-placeholder">
+          <div class="video-play-icon">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#2563EB" stroke-width="2" opacity="0.3"/><path d="M24 20l16 10-16 10V20z" fill="#2563EB" opacity="0.5"/></svg>
+          </div>
+          <p>Full Demo — Meal Sequence</p>
+        </div>
+        <div class="video-placeholder">
+          <div class="video-play-icon">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#2563EB" stroke-width="2" opacity="0.3"/><path d="M24 20l16 10-16 10V20z" fill="#2563EB" opacity="0.5"/></svg>
+          </div>
+          <p>Facial Tracking Closeup</p>
+        </div>
+        <div class="video-placeholder">
+          <div class="video-play-icon">
+            <svg viewBox="0 0 60 60" fill="none"><circle cx="30" cy="30" r="28" stroke="#2563EB" stroke-width="2" opacity="0.3"/><path d="M24 20l16 10-16 10V20z" fill="#2563EB" opacity="0.5"/></svg>
+          </div>
+          <p>Tool Change Demo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner two-col contact-layout">
+      <div class="contact-info">
+        <span class="section-label">Get In Touch</span>
+        <h2>Interested in Munchkin?</h2>
+        <p>Whether you're a clinician, caregiver, researcher, investor, or someone who could benefit from Munchkin — we'd love to hear from you. Reach out to request a demo, ask a question, or explore a partnership.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4V4z" stroke="#2563EB" stroke-width="1.5" rx="2"/><path d="M4 8l8 5 8-5" stroke="#2563EB" stroke-width="1.5" stroke-linecap="round"/></svg>
+            <a href="mailto:hello@munchkin.llc">hello@munchkin.llc</a>
+          </div>
+          <div class="contact-item">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5 14.5 7.62 14.5 9 13.38 11.5 12 11.5z" stroke="#2563EB" stroke-width="1.5"/></svg>
+            <span>Olin College of Engineering, Needham MA</span>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@email.com" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="subject">I am a…</label>
+          <select id="subject" name="subject">
+            <option value="">Select one</option>
+            <option value="clinician">Clinician / Healthcare Provider</option>
+            <option value="caregiver">Caregiver / Family Member</option>
+            <option value="patient">Person with Limited Mobility</option>
+            <option value="investor">Investor / Partner</option>
+            <option value="researcher">Researcher / Academic</option>
+            <option value="press">Press / Media</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help, or request a demo…" required></textarea>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" id="demo" name="demo" />
+          <label for="demo">I'd like to request a live demo of Munchkin.</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+        <p class="form-note">We typically respond within 1–2 business days.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Munchkin</span>
+        <p>© 2026 Munchkin LLC. All rights reserved.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#videos">Videos</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

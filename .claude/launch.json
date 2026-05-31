@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "munchkly",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-p", "3333", "D:\\Munchkly"],
+      "port": 3333
+    }
+  ]
+}
