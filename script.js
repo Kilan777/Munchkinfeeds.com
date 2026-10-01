@@ -1,58 +1,60 @@
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 20);
-});
+// Nav border once the page scrolls
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 8);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 
-// Mobile menu toggle
-const hamburger = document.getElementById('hamburger');
-const mobileMenu = document.getElementById('mobileMenu');
+// Hero loop: autoplay unless the visitor prefers reduced motion; always pausable
+const heroVideo = document.getElementById('heroVideo');
+const heroToggle = document.getElementById('heroToggle');
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-hamburger.addEventListener('click', () => {
-  mobileMenu.classList.toggle('open');
-});
+const setPaused = (paused) => {
+  heroToggle.classList.toggle('paused', paused);
+  heroToggle.setAttribute('aria-label', paused ? 'Play video' : 'Pause video');
+};
 
-// Close mobile menu on link click
-document.querySelectorAll('.mobile-link').forEach(link => {
-  link.addEventListener('click', () => mobileMenu.classList.remove('open'));
-});
+if (reduceMotion) {
+  setPaused(true);
+} else {
+  heroVideo.play().then(() => setPaused(false)).catch(() => setPaused(true));
+}
 
-
-// Contact form — AJAX submit to Formspree
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
-  btn.disabled = true;
-
-  const res = await fetch(contactForm.action, {
-    method: 'POST',
-    body: new FormData(contactForm),
-    headers: { 'Accept': 'application/json' }
-  });
-
-  if (res.ok) {
-    contactForm.innerHTML = `
-      <div class="form-success">
-        <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <h3>Message sent!</h3>
-        <p>Thanks for reaching out. We'll get back to you within 1–2 business days.</p>
-      </div>`;
+heroToggle.addEventListener('click', () => {
+  if (heroVideo.paused) {
+    heroVideo.play();
+    setPaused(false);
   } else {
-    btn.textContent = 'Send Message';
-    btn.disabled = false;
-    alert('Something went wrong. Please try again or email us at info@munchkly.com');
+    heroVideo.pause();
+    setPaused(true);
   }
 });
 
-// Smooth scroll offset for fixed navbar
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const target = document.querySelector(anchor.getAttribute('href'));
-    if (!target) return;
+// Forms: submit to Formspree without leaving the page
+const CHECK = '<svg width="44" height="44" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm-1.5 14.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4z" fill="currentColor"/></svg>';
+
+document.querySelectorAll('.js-form').forEach((form) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const offset = 80;
-    window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    const btn = form.querySelector('button[type="submit"]');
+    const err = form.querySelector('.form-error');
+    const label = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    err.hidden = true;
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' },
+      });
+      if (!res.ok) throw new Error(res.status);
+      form.innerHTML = `<div class="form-success" role="status">${CHECK}<p>${form.dataset.success}</p></div>`;
+    } catch {
+      btn.disabled = false;
+      btn.textContent = label;
+      err.hidden = false;
+    }
   });
 });
