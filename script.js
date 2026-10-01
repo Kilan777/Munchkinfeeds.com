@@ -71,21 +71,5 @@ const setMenu = (open) => {
 menuBtn.addEventListener('click', () => setMenu(mobileMenu.hidden));
 mobileMenu.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
 document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mobileMenu.hidden) setMenu(false); });
-window.matchMedia('(min-width: 861px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
+window.matchMedia('(min-width: 641px)').addEventListener('change', (e) => { if (e.matches) setMenu(false); });
 
-// Sticky "Join the waitlist" bar: shown once the hero button is off screen, hidden at the form and footer
-const stickyCta = document.getElementById('stickyCta');
-const heroCta = document.querySelector('.hero-actions .btn');
-const seen = new Map();
-const updateSticky = () => {
-  const show = seen.get('hero') === false && !seen.get('waitlist') && !seen.get('footer');
-  stickyCta.classList.toggle('show', show);
-  stickyCta.setAttribute('aria-hidden', !show);
-  stickyCta.querySelector('a').tabIndex = show ? 0 : -1;
-};
-const io = new IntersectionObserver((entries) => {
-  entries.forEach((en) => seen.set(en.target.dataset.watch, en.isIntersecting));
-  updateSticky();
-});
-[[heroCta, 'hero'], [document.getElementById('waitlist'), 'waitlist'], [document.querySelector('.footer'), 'footer']]
-  .forEach(([el, key]) => { el.dataset.watch = key; io.observe(el); });

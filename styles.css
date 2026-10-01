@@ -72,7 +72,7 @@ p { margin: 0; }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   padding: 14px 24px; border-radius: 999px; border: 1.5px solid transparent;
   font: inherit; font-size: 1rem; font-weight: 600; text-decoration: none;
-  cursor: pointer; transition: background .15s, color .15s, border-color .15s, transform .15s;
+  cursor: pointer; white-space: nowrap; transition: background .15s, color .15s, border-color .15s, transform .15s;
 }
 .btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--btn); color: #fff; }
@@ -93,9 +93,9 @@ p { margin: 0; }
 .nav.scrolled { border-bottom-color: var(--line); }
 .nav-inner { display: flex; align-items: center; gap: 32px; height: 68px; }
 .nav-links { display: flex; gap: 28px; margin-left: auto; }
-.nav-links a { color: var(--ink-dim); text-decoration: none; font-size: .95rem; font-weight: 500; }
+.nav-links a { white-space: nowrap; color: var(--ink-dim); text-decoration: none; font-size: .95rem; font-weight: 500; }
 .nav-links a:hover { color: var(--ink); }
-@media (max-width: 860px) { .nav-links { display: none; } .nav-inner .btn { margin-left: auto; } }
+
 
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
 .brand-mark {
@@ -103,7 +103,9 @@ p { margin: 0; }
   -webkit-mask: url(logo.svg) center / contain no-repeat;
   mask: url(logo.svg) center / contain no-repeat;
 }
-.brand-name { font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+.brand-name { white-space: nowrap; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
+
+@media (max-width: 760px) { .nav-links { display: none; } .nav-cta { margin-left: auto; } }
 
 /* Hero */
 .hero { padding: 56px 0 96px; }
@@ -245,10 +247,10 @@ p { margin: 0; }
 .brand-footer .brand-name { font-size: 1rem; }
 @media (max-width: 760px) { .newsletter { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
 
-/* Mobile menu + sticky CTA (hidden on desktop) */
-.menu-btn, .mobile-menu, .sticky-cta { display: none; }
+/* Mobile menu (phones only) */
+.menu-btn, .mobile-menu { display: none; }
 
-@media (max-width: 860px) {
+@media (max-width: 640px) {
   .nav-cta { display: none; }
   .nav-inner { height: 60px; gap: 12px; }
   .brand-name { white-space: nowrap; font-size: 1.05rem; }
@@ -279,21 +281,11 @@ p { margin: 0; }
   .mobile-menu .btn { margin-top: 28px; padding: 16px 24px; }
   body.menu-open { overflow: hidden; }
 
-  .sticky-cta {
-    display: block; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
-    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: color-mix(in srgb, var(--bg) 88%, transparent);
-    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-    border-top: 1px solid var(--line);
-    transform: translateY(110%); transition: transform .25s ease;
-  }
-  .sticky-cta.show { transform: none; }
-  .sticky-cta .btn { padding: 15px 24px; }
 }
 @keyframes menu-in { from { opacity: 0; transform: translateY(-6px); } }
 @media (prefers-reduced-motion: reduce) {
   .mobile-menu:not([hidden]) { animation: none; }
-  .sticky-cta, .menu-btn span { transition: none; }
+  .menu-btn span { transition: none; }
 }
 
 /* Phone layout */
@@ -344,7 +336,7 @@ p { margin: 0; }
   .form { gap: 14px; }
   .form-card .btn { padding: 16px 24px; }
 
-  .footer { padding: 56px 0 calc(100px + env(safe-area-inset-bottom)); }
+  .footer { padding: 56px 0 calc(32px + env(safe-area-inset-bottom)); }
   .newsletter { padding-bottom: 40px; }
   .newsletter h2 { font-size: 1.5rem; }
   /* Email + button share one pill */
