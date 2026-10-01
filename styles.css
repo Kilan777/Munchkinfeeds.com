@@ -48,7 +48,8 @@ p { margin: 0; }
 .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
 @media (max-width: 600px) { .wrap { padding: 0 16px; } }
 
-.sr-only, .hp {
+.hp { display: none !important; }
+.sr-only {
   position: absolute !important; width: 1px; height: 1px;
   overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
 }
