@@ -101,8 +101,8 @@ p { margin: 0; }
 .brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
 .brand-mark {
   width: 32px; height: 27px; background: var(--blue);
-  -webkit-mask: url(logo.svg) center / contain no-repeat;
-  mask: url(logo.svg) center / contain no-repeat;
+  -webkit-mask: url(logo.svg?v=2) center / contain no-repeat;
+  mask: url(logo.svg?v=2) center / contain no-repeat;
 }
 .brand-name { white-space: nowrap; font-weight: 700; font-size: 1.15rem; letter-spacing: -0.02em; }
 
