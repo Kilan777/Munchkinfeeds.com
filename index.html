@@ -6,7 +6,8 @@
   <title>Munchkin Robotics — Feed yourself, every meal</title>
   <meta name="description" content="Munchkin is a robotic feeding assistant that lets people with limited arm and hand movement feed themselves, at the same table and the same time as everyone else. Join the waitlist." />
   <link rel="canonical" href="https://munchkinrobotics.com/" />
-  <meta name="theme-color" content="#1e43c4" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light only" />
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Munchkin Robotics" />
@@ -47,9 +48,20 @@
         <a href="#why">Why it matters</a>
         <a href="#who">Who it's for</a>
       </nav>
-      <a href="#waitlist" class="btn btn-primary btn-sm">Join the waitlist</a>
+      <a href="#waitlist" class="btn btn-primary btn-sm nav-cta">Join the waitlist</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span>
+      </button>
     </div>
   </header>
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav class="wrap" aria-label="Mobile">
+      <a href="#why">Why it matters</a>
+      <a href="#different">What makes it different</a>
+      <a href="#who">Who it's for</a>
+      <a href="#waitlist" class="btn btn-primary btn-block">Join the waitlist</a>
+    </nav>
+  </div>
 
   <main id="main">
 
@@ -233,6 +245,10 @@
       </div>
     </div>
   </footer>
+
+  <div class="sticky-cta" id="stickyCta" aria-hidden="true">
+    <a href="#waitlist" class="btn btn-primary btn-block" tabindex="-1">Join the waitlist</a>
+  </div>
 
   <script src="script.js"></script>
 </body>
